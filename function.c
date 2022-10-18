@@ -31,7 +31,7 @@ int _print_mod(va_list args)
  * @args: arg recieved by the function
  * Return: number of characters printed
  */
-int _print_strings(va_list args)
+int _print_string(va_list args)
 {
 	int i, count = 0;
 	char *buffer = va_arg(args, char *);
@@ -77,4 +77,36 @@ int _print_int(va_list args)
 		expo = expo / 10;
 	}
 	return (len);
+}
+/**
+ * _print_binary - prints binary
+ * @args: recives va_list value which is in t
+ * Return: count
+ */
+int _print_binary(va_list args)
+{
+	unsigned int n, m, i, sum;
+	unsigned int a[32];
+	int count;
+
+	n = va_arg(args, unsigned int);
+	m = 2147483648;
+	a[0] = n / m;
+	for (i = 1; i < 32; i++)
+	{
+		m /= 2;
+		a[i] = (n / m) % 2;
+	}
+	for (i = 0, sum = 0, count = 0; i < 32; i++)
+	{
+		sum = sum + a[i];
+		if (sum || i == 31)
+		{
+			char z = '0' + a[i];
+
+			write(1, &z, 1);
+			count++;
+		}
+	}
+	return (count);
 }

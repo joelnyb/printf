@@ -33,15 +33,14 @@ int _print_mod(va_list args)
  */
 int _print_string(va_list args)
 {
-	int i, count = 0;
-	char *buffer = va_arg(args, char *);
+	int count;
+	char *str = va_arg(args, char *);
 
-	if (buffer == NULL)
-		buffer = "(null)";
-	for (i = 0;  buffer[i]; i++)
+	if (str == NULL)
+		str = "(null)";
+	for (count = 0; str[count]; count++)
 	{
-		write(1, &buffer[i], 1);
-		count = count + 1;
+		_putchar(str[count]);
 	}
 
 	return (count);

@@ -3,7 +3,7 @@
 
 #include <unistd.h>
 #include <stdarg.h>
-
+#include <stdlib.h>
 
 /**
  * struct arguments - interface for printing

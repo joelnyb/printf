@@ -30,7 +30,7 @@ int _putchar(char args);
 int print_S(va_list args);
 int print_p(va_list args);
 int print_r(va_list args);
-
+int print_R(va_list args);
 
 
 

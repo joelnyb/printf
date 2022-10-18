@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	argument id_s[] = {{'c', _print_char}, {'s', _print_string},
 		{'i', _print_int}, {'b', _print_binary}, {'u', print_u},
 		{'o', print_o}, {'x', print_x}, {'X', print_X}, {'p', print_p},
-		 {'S', print_S}, {'r', print_r},
+		 {'S', print_S}, {'r', print_r}, {'R', print_R},
 		 {'d', _print_int}, {'%', _print_mod}, {'\0', NULL}
 	};
 

@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			for (; format[i] != '\0'; j++)
+			for (; format[i] != '\0'; i++)
 			{
 				for (j = 0; id_s[j].id != '\0'; j++)
 					if (format[i] == id_s[j].id)

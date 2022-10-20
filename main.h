@@ -31,7 +31,8 @@ int print_S(va_list args);
 int print_p(va_list args);
 int print_r(va_list args);
 int print_R(va_list args);
-
+int (*get_print(char s))(va_list, flags_t *);
+int get_flag(char s, flags_t *f);
 
 
 #endif

@@ -13,20 +13,20 @@
 int (*get_print(char s))(va_list, flags_t *)
 {
 	ph func_arr[] = {
-		{'i', print_int},
-		{'s', print_string},
-		{'c', print_char},
-		{'d', print_int},
-		{'u', print_unsigned},
-		{'x', print_hex},
-		{'X', print_hex_big},
-		{'b', print_binary},
-		{'o', print_octal},
-		{'R', print_rot13},
-		{'r', print_rev},
-		{'S', print_bigS},
-		{'p', print_address},
-		{'%', print_percent}
+		{'i', _print_int},
+		{'s', _print_string},
+		{'c', _print_char},
+		{'d', _print_int},
+		{'u', print_u},
+		{'x', print_x},
+		{'X', print_X},
+		{'b', _print_binary},
+		{'o', print_o},
+		{'R', print_R},
+		{'r', print_r},
+		{'S', print_S},
+		{'p', print_p},
+		{'%', _print_mod}
 		};
 	int flags = 14;
 
